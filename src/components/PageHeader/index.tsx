@@ -11,7 +11,7 @@ interface PageHeaderProps{
     title:string;
 }
 
-const PageHeader: React.FC<PageHeaderProps> =(props) =>{
+const PageHeader: React.FC<PageHeaderProps> =(props) =>{ 
     return (
         <header className="page-header">
             <div className="top-bar-container">
