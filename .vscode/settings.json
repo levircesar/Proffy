@@ -1,5 +1,5 @@
 {
-    //"terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
   
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "newUntitledFile",
@@ -8,7 +8,7 @@
     "editor.fontSize": 16,
     "editor.lineHeight": 26,
     "editor.fontFamily": "JetBrains Mono",
-    //"terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.shell.linux": "/bin/zsh",
     "editor.fontLigatures": true,
     "editor.semanticHighlighting.enabled": false,
   
@@ -59,7 +59,7 @@
     "gitlens.codeLens.enabled": false,
   
     "git.enableSmartCommit": true,
-    //"terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.shell.osx": "/bin/zsh",
     "liveshare.featureSet": "insiders", 
 
     "typescript.tsserver.log": "verbose",
