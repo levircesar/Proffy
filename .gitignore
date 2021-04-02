@@ -9,7 +9,6 @@ web/node_modules
 server/node_modules
 # testing
 /coverage
-/build
 
 # production
 /build
