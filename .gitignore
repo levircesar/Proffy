@@ -10,6 +10,7 @@ server/node_modules
 mobile/node_modules
 mobile/.expo
 mobile/.expo-shared
+mobile/.git
 # testing
 /coverage
 
