@@ -1,5 +1,6 @@
 {
   "name": "nlw2",
+  "homepage": "https://proffytestelevir.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +24,7 @@
   "scripts": {
     "server": "yarn --cwd ../server start",
     "start": "react-scripts start",
-    "teste":"concurrently \"yarn server\" \"yarn build\" \"yarn start\"",
+    "teste":"concurrently \"yarn server\" \"yarn build\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
