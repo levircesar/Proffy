@@ -10,6 +10,13 @@ interface ScheduleItem{
 }
 
 export default class ClassesController{
+  async list(req: Request , res: Response){
+    const all = await db('classes')
+      .join('users','classes.user_id','=','users.id')
+      .select('classes.*','users.*');
+    
+    return res.json(all);
+  }
   async index(req: Request , res: Response){
     const filters = req.query;
 

@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 
 import Input from '../../components/Input';
 import PageHeader from '../../components/PageHeader';
@@ -11,6 +11,7 @@ import './styles.css';
 function TeacherList(){
 
     const [teachers, setTeachers] = useState([]);
+    const [all, setAll] = useState([]);
 
     const [subject, setSubject] = useState('');
     const [week_day, setWeekDay] = useState('');
@@ -18,7 +19,7 @@ function TeacherList(){
 
     async function searchTeachers(e: FormEvent){
         e.preventDefault();
-
+        setAll([]);
         const response = await api.get('classes',{
             params:{
                 subject,
@@ -30,6 +31,13 @@ function TeacherList(){
         setTeachers(response.data);
     }
 
+    useEffect(()=>{
+        api.get('list').then(res=>{
+            setAll(res.data);
+        });
+            console.log(all);
+    } ,[]);
+  
     return(
         <div id="page-teacher-list" className="container">
             <PageHeader title="Que incrivel que você quer dar aulas.">
@@ -82,9 +90,18 @@ function TeacherList(){
                 {
                     teachers.map((teacher:Teacher)=>{
                         return <TeacherItem key={teacher.id} teacher={teacher}/>
-                    })
-                }                
+                    }) 
+                } 
+                {
+                    all.map((teacher:Teacher)=>{
+                        return <TeacherItem key={teacher.id} teacher={teacher}/>
+                    }).slice(0, 10)
+                }
+                
+                           
             </main>
+           
+
         </div>
     )
 }

@@ -19,6 +19,7 @@ function Landing(){
             const {total} = res.data;
             
             setTotalConnections(total);
+            console.log(total);
         })
     } ,[]);
 
