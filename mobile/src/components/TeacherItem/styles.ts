@@ -104,8 +104,6 @@ const styles = StyleSheet.create({
     marginLeft: 16,
   },
 
-
-
 });
 
 export default styles;
