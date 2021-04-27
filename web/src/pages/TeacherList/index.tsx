@@ -33,9 +33,11 @@ function TeacherList(){
 
     useEffect(()=>{
         api.get('list').then(res=>{
-            setAll(res.data);
-        });
-            console.log(all);
+            const {total} = res.data;
+            
+            setAll(total);
+            console.log(total);
+        })
     } ,[]);
   
     return(
