@@ -33,7 +33,7 @@ function TeacherList(){
 
     useEffect(()=>{
         api.get('list').then(res=>{
-            const {total} = res.data;
+            const total = res.data;
             
             setAll(total);
             console.log(total);
